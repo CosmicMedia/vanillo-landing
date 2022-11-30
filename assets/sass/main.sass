@@ -1,0 +1,206 @@
+/*
+ *  Created by @RemiThe4ndroid for Vanillo
+ *  © Copyright 2022 CosmicMedia, LLC.
+ */
+  
+@import 'epx.sass'
+@import 'rpx.sass'
+
+*
+  box-sizing: border-box
+  font-family: Inter
+  font-size: epx(16)
+  scroll-behavior: smooth
+  
+#viewport
+  position: absolute
+  overflow: auto
+  z-index: 1
+
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.hero
+  position: relative
+  
+  width: 100%
+  height: 100%
+
+  display: flex
+  flex-direction: column
+
+  justify-content: center
+  align-items: center
+
+  background-color: #ED9F5A
+  background-image: url(/assets/img/circles.png)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover 
+
+  color: #FFF
+
+  box-shadow: 0 0 rpx(8) rpx(2) rgba(0, 0, 0, .15)
+
+  .learn-more
+    position: absolute
+
+    bottom: rpx(8)
+
+    display: flex
+    flex-direction: column
+
+    align-items: center
+
+    .arrow
+      width: rpx(48)
+      animation: arrow .5s ease-in infinite alternate
+
+  .title
+    font-size: epx(24)
+    font-weight: 500
+    margin-bottom: epx(-8)
+
+  .subtitle
+    font-size: epx(12)
+    color: #F0F0F0
+
+.countdown
+  display: flex
+  flex-direction: row
+
+  & > div
+    margin: rpx(8)
+
+    display: flex
+    flex-direction: column
+
+    align-items: center
+
+    .time
+      font-size: epx(48)
+      font-weight: 600
+
+    .unit
+      margin-top: epx(-8)
+
+.wrapper
+  padding: rpx(32)
+
+  display: flex
+  flex-direction: column
+
+  background-color: #FFF
+  background-image: url(/assets/img/circles2.png)
+  background-repeat: no-repeat
+  background-position: bottom left
+  background-size: contain
+
+  align-items: center
+
+.content
+  width: 100%
+
+  color: #303030
+
+  & > .item
+    margin-bottom: rpx(16)
+
+    display: flex
+    flex-direction: column
+
+    &:last-of-type
+      margin-bottom: 0
+
+    & > img
+      width: 100%
+      border-radius: rpx(8)
+      box-shadow: 0 0 rpx(6) 0 rgba(0, 0, 0, .15)
+      order: 0
+
+    & > div
+      width: 100%
+      padding: rpx(16) 0
+      order: 1
+
+  .title
+    font-size: epx(24)
+    font-weight: 600
+    margin-bottom: rpx(2)
+
+  .subtitle
+    font-size: epx(14)
+    color: #707070
+
+.footer
+  padding: rpx(12)
+  min-height: rpx(40)
+
+  display: flex
+  flex-direction: column
+
+  justify-content: space-between
+  align-items: center
+
+  background: #FFF
+
+  font-size: epx(14)
+  color: #707070
+
+  box-shadow: 0 0 rpx(6) 0 rgba(0, 0, 0, .15)
+
+  a
+    color: #707070
+
+// Animations
+
+@keyframes arrow
+  0%
+    margin: rpx(8) 0 0 0
+  100%
+    margin: rpx(4) 0 rpx(4) 0
+
+// Generate breakpoints
+
+$breakpoints: ('sm': rpx(576), 'md': rpx(768), 'lg': rpx(992), 'xl': rpx(1200))
+
+@each $breakpoint, $size in $breakpoints
+  @media only screen and (min-width: $size)
+    .content
+      width: $size - (rpx(32) * 2)
+
+    @if $breakpoint == "sm"
+      .footer
+        flex-direction: row
+
+    @if $breakpoint == "md"
+      .hero
+        font-size: epx(24)
+        
+        .learn-more
+          font-size: epx(12)
+
+      .wrapper
+        background-size: 60%
+
+      .content > .item
+        flex-direction: row
+
+        & > img
+          width: 40%
+        &.left > img
+          order: 0
+        &.right > img
+          order: 1
+
+        & > div
+          width: 60%
+          padding: 0
+        &.left > div
+          order: 1
+          padding-left: rpx(16)
+        &.right > div
+          order: 0
+          padding-right: rpx(16)
