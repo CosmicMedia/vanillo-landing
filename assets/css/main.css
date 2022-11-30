@@ -1,1 +1,197 @@
-*{box-sizing:border-box;font-family:Inter;font-size:1em;scroll-behavior:smooth}#viewport{position:absolute;overflow:auto;z-index:1;top:0;bottom:0;left:0;right:0}.hero{position:relative;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#ed9f5a;background-image:url(/assets/img/circles.png);background-repeat:no-repeat;background-position:center;background-size:cover;color:#fff;box-shadow:0 0 .5rem .125rem rgba(0,0,0,.15)}.hero .learn-more{position:absolute;bottom:.5rem;display:flex;flex-direction:column;align-items:center}.hero .learn-more .arrow{width:3rem;animation:arrow .5s ease-in infinite alternate}.hero .title{font-size:1.5em;font-weight:500;margin-bottom:-0.5em}.hero .subtitle{font-size:.75em;color:#f0f0f0}.countdown{display:flex;flex-direction:row}.countdown>div{margin:.5rem;display:flex;flex-direction:column;align-items:center}.countdown>div .time{font-size:3em;font-weight:600}.countdown>div .unit{margin-top:-0.5em}.wrapper{padding:2rem;display:flex;flex-direction:column;background-color:#fff;background-image:url(/assets/img/circles2.png);background-repeat:no-repeat;background-position:bottom left;background-size:contain;align-items:center}.content{width:100%;color:#303030}.content>.item{margin-bottom:1rem;display:flex;flex-direction:column}.content>.item:last-of-type{margin-bottom:0}.content>.item>img{width:100%;border-radius:.5rem;box-shadow:0 0 .375rem 0 rgba(0,0,0,.15);order:0}.content>.item>div{width:100%;padding:1rem 0;order:1}.content .title{font-size:1.5em;font-weight:600;margin-bottom:.125rem}.content .subtitle{font-size:.875em;color:#707070}.footer{padding:.75rem;min-height:2.5rem;display:flex;flex-direction:column;justify-content:space-between;align-items:center;background:#fff;font-size:.875em;color:#707070;box-shadow:0 0 .375rem 0 rgba(0,0,0,.15)}.footer a{color:#707070}@keyframes arrow{0%{margin:.5rem 0 0 0}100%{margin:.25rem 0 .25rem 0}}@media only screen and (min-width: 36rem){.content{width:32rem}.footer{flex-direction:row}}@media only screen and (min-width: 48rem){.content{width:44rem}.hero{font-size:1.5em}.hero .learn-more{font-size:.75em}.wrapper{background-size:60%}.content>.item{flex-direction:row}.content>.item>img{width:40%}.content>.item.left>img{order:0}.content>.item.right>img{order:1}.content>.item>div{width:60%;padding:0}.content>.item.left>div{order:1;padding-left:1rem}.content>.item.right>div{order:0;padding-right:1rem}}@media only screen and (min-width: 62rem){.content{width:58rem}}@media only screen and (min-width: 75rem){.content{width:71rem}}
+* {
+    box-sizing: border-box;
+    font-family: Inter;
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+#viewport {
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ed9f5a;
+    background-image: url(/assets/img/circles.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    box-shadow: 0 0 0.5rem 0.125rem rgba(0, 0, 0, 0.15);
+}
+.hero .learn-more {
+    position: absolute;
+    bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero .learn-more .arrow {
+    width: 3rem;
+    animation: arrow 0.5s ease-in infinite alternate;
+}
+.hero .title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: -0.5em;
+}
+.hero .subtitle {
+    font-size: 0.75em;
+    color: #f0f0f0;
+}
+.countdown {
+    display: flex;
+    flex-direction: row;
+}
+.countdown > div {
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown > div .time {
+    font-size: 3em;
+    font-weight: 600;
+    font-family: monospace, 'Inter', sans-serif;
+}
+.countdown > div .unit {
+    margin-top: -0.5em;
+}
+.wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-image: url(/assets/img/circles2.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    align-items: center;
+}
+.content {
+    width: 100%;
+    color: #303030;
+}
+.content > .item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.content > .item:last-of-type {
+    margin-bottom: 0;
+}
+.content > .item > img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.375rem 0 rgba(0, 0, 0, 0.15);
+    order: 0;
+}
+.content > .item > div {
+    width: 100%;
+    padding: 1rem 0;
+    order: 1;
+}
+.content .title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+}
+.content .subtitle {
+    font-size: 0.875em;
+    color: #707070;
+}
+.footer {
+    padding: 0.75rem;
+    min-height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    font-size: 0.875em;
+    color: #707070;
+    box-shadow: 0 0 0.375rem 0 rgba(0, 0, 0, 0.15);
+}
+.footer a {
+    color: #707070;
+}
+@keyframes arrow {
+    0% {
+        margin: 0.5rem 0 0 0;
+    }
+    100% {
+        margin: 0.25rem 0 0.25rem 0;
+    }
+}
+@media only screen and (min-width: 36rem) {
+    .content {
+        width: 32rem;
+    }
+    .footer {
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 48rem) {
+    .content {
+        width: 44rem;
+    }
+    .hero {
+        font-size: 1.5em;
+    }
+    .hero .learn-more {
+        font-size: 0.75em;
+    }
+    .wrapper {
+        background-size: 60%;
+    }
+    .content > .item {
+        flex-direction: row;
+        margin-top: 100px;
+    }
+    .content > .item > img {
+        width: 40%;
+    }
+    .content > .item.left > img {
+        order: 0;
+        flex-shrink: 0;
+    }
+    .content > .item.right > img {
+        order: 1;
+    }
+    .content > .item > div {
+        width: 60%;
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content > .item.left > div {
+        order: 1;
+        padding-left: 1rem;
+    }
+    .content > .item.right > div {
+        order: 0;
+        padding-right: 1rem;
+    }
+}
+@media only screen and (min-width: 62rem) {
+    .content {
+        width: 58rem;
+    }
+}
+@media only screen and (min-width: 75rem) {
+    .content {
+        width: 71rem;
+    }
+}
