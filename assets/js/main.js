@@ -3,7 +3,7 @@
 *  © Copyright 2022 CosmicMedia, LLC. 
 */
 
-var release = (new Date("2022-12-25T00:00:00.000-05:00")).getTime() / 1000;
+var release = (new Date("2023-03-01T00:00:00.000-05:00")).getTime() / 1000;
 var current = (new Date()).getTime() / 1000;
 
 var time;
