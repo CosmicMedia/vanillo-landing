@@ -1,6 +1,6 @@
 /*
 *  Created by @RemiThe4ndroid for Vanillo
-*  © Copyright 2022 CosmicMedia, LLC. 
+*  © Copyright 2022-2023 CosmicMedia, LLC. 
 */
 
 var release = (new Date("2023-03-01T00:00:00.000-05:00")).getTime() / 1000;
@@ -60,7 +60,7 @@ update();
 
 if (time > 0) interval = setInterval(update, 1000);
 
-// Soothing Jazz brought to you by @RemiThe4ndroid and RelaxingJazz.com
+// Soothing Jazz brought to you by @RemiThe4ndroid and RelaxingJazz.com, powered by Bads.tm
 
 var jazz = document.getElementById('jazz');
 
