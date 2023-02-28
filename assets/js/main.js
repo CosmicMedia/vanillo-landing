@@ -16,12 +16,12 @@ function zero(string) {
 	return string;
 }
 
-function getDays() {
-	var days = Math.floor(time / 86400);
-	time -= days * 86400;
+// function getDays() {
+// 	var days = Math.floor(time / 86400);
+// 	time -= days * 86400;
 
-	return zero(days);
-}
+// 	return zero(days);
+// }
 
 function getHours() {
 	var hours = Math.floor(time / 3600);
@@ -48,7 +48,7 @@ function update() {
 	
 	if (time <= 0) clearInterval(interval);
 	
-	document.getElementById('days').innerHTML    = getDays();
+	// document.getElementById('days').innerHTML    = getDays();
 	document.getElementById('hours').innerHTML   = getHours();
 	document.getElementById('minutes').innerHTML = getMinutes();
 	document.getElementById('seconds').innerHTML = getSeconds();
