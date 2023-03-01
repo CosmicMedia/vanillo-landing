@@ -45,6 +45,9 @@
     font-weight: 500;
     margin-bottom: -0.5em;
 }
+.desc {
+    margin-top: 20px;
+}
 .hero .subtitle {
     font-size: 0.75em;
     color: #f0f0f0;
